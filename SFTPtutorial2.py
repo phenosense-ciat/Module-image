@@ -10,7 +10,7 @@ filename = 'testfile_log.txt'
 
 def sftpExample():
     try:
-        s = sftp.Connection(host='192.168.0.5',username='RubenDario', password='nanami89',cnopts=cnopts)
+        s = sftp.Connection(host='192.168.0.5',username='RubenDario', password='********',cnopts=cnopts)
 
         remotepath='/C:/ftp/rasp/testfile_log.txt'
         localpath=filename
