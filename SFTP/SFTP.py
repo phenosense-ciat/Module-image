@@ -18,7 +18,7 @@ data = filename+ext
 location = '/home/pi/CIAT/'
 
 # Method that stablish the connection
-def sftpExample():
+def sftpRutine():
     try:
         # 'Host' usually is the IP of the server machine, 'username' is the name of user of the server machine with the priviliges of administer or with user that start the server machine. 'password' is the pass of the usuer the cnopts is equal cnopts is default. 
         s = sftp.Connection(host='192.168.0.6',username='ubuntu', password='usuario',cnopts=cnopts)
@@ -41,4 +41,7 @@ def sftpExample():
         print str(e)
 
 # Called the method that send a file to server machine
-sftpExample()        
+
+if __name__=='__main__':
+    
+    sftpRutine()        
