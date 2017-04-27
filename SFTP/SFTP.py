@@ -14,6 +14,8 @@ filename = 'ndviColor001'
 ext = '.jpg'
 # Complete name of file with your respectly extention.
 data = filename+ext
+# Direction of file in the localpath
+location = '/home/pi/CIAT/'
 
 # Method that stablish the connection
 def sftpExample():
@@ -22,8 +24,8 @@ def sftpExample():
         s = sftp.Connection(host='192.168.0.6',username='ubuntu', password='usuario',cnopts=cnopts)
 
         # Direction of remotepath in the server machine is necessary to end put the complete filename to send
-        remotepath='/var/www/'+data
-        localpath=data
+        remotepath = '/var/www/'+data
+        localpath = location+data
         
         # Write in the remotepath a file or other words send a file to server from client (raspberry pi)
         s.put(localpath,remotepath)
