@@ -25,6 +25,7 @@ def sftpExample():
 
         # Direction of remotepath in the server machine is necessary to end put the complete filename to send
         remotepath = '/var/www/'+data
+        # Direction of localpath in the client machine (ubication + complete name of the file)
         localpath = location+data
         
         # Write in the remotepath a file or other words send a file to server from client (raspberry pi)
