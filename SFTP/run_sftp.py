@@ -1,7 +1,7 @@
-import SFTPtutorial3
+import SFTPPhenosense
 
 if __name__=='__main__':
-    SFTPtutorial3.sftpRutine()
+    SFTPPhenosense.sftpRutine()
     
 
 
