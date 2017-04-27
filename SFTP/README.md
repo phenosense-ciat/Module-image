@@ -89,3 +89,78 @@ Install and setup a SFTP server is easier in Ubuntu than in Windows because does
 
 # References
 
+- Aquí en esta página se encontró como realizar carpetas iniciando con punto, por ejemplo .ssh, .rasp etc. desde el CMD:
+
+(https://superuser.com/questions/64471/create-rename-a-file-folder-that-begins-with-a-dot-in-windows)
+
+- Este es el tutorial que se siguió para configurar un SFTP server para Windows
+(https://winscp.net/eng/docs/guide_windows_openssh_server)
+
+- Aquí se evita que busque las hostkey, las initializa como vacias.
+(http://stackoverflow.com/questions/38939454/finding-the-host-key-with-pysftp)
+
+- Aquí enseña que cuando el comando pip install 'pythonpackagename' no funciona es porque necesita ser super usuario. Por lo tanto anteponer el prefijo 'sudo' ejemplo sudo pip install 'pythonpackagename'
+	
+(http://stackoverflow.com/questions/31512422/pip-install-r-oserror-errno-13-permission-denied)
+
+- Aquí explica que para instalar cryptography y paramiko necesita actualizar el raspberry sudo apt-get update e instalar las librerias de build-essential libssl-dev, libffi-dev y python-dev.
+(http://stackoverflow.com/questions/22073516/failed-to-install-python-cryptography-package-with-pip-and-setup-py)
+
+- Tutoriales de manejo de SFTP 
+(https://www.youtube.com/watch?v=sF0VkwqUyek)
+
+- Busquedas relacionadas con subir archivos via sftp con python.
+(http://stackoverflow.com/questions/33751854/upload-file-via-sftp-with-python)
+
+- Busqueda relacionada con How to make a ssh connection with python?
+(http://stackoverflow.com/questions/6188970/how-to-make-a-ssh-connection-with-python)
+
+- Busqueda relacionda con  Using secure shell (SSH) for login and secure copy (SCP) for data transfer on Linux
+(https://www.howtoforge.com/tutorial/ssh-and-scp-with-public-key-authentication/)
+
+- Busqueda relacionada con SCP File Transfer Between Pi and Windows
+(https://raspberrypi.stackexchange.com/questions/39990/scp-file-transfer-between-pi-and-windows)
+
+- Video relacion con How to Install OpenSSH to Windows (poco útil)
+(https://www.youtube.com/watch?v=FZyUX-LZHts)
+
+- Connection reset by peer [errno 104] in Python 2.7
+(http://stackoverflow.com/questions/33111556/connection-reset-by-peer-errno-104-in-python-2-7)
+
+- Python socket.error: [Errno 104] Connection reset by peer
+(http://stackoverflow.com/questions/33981141/python-socket-error-errno-104-connection-reset-by-peer)
+
+- Yet Another 'Connection reset by peer' Error
+(http://stackoverflow.com/questions/24874894/yet-another-connection-reset-by-peer-error)
+
+- socket.shutdown vs socket.close
+
+(http://stackoverflow.com/questions/409783/socket-shutdown-vs-socket-close)
+
+- No handlers could be found for logger paramiko
+(http://stackoverflow.com/questions/19152578/no-handlers-could-be-found-for-logger-paramiko)
+
+- SFTP links:
+1. (https://winscp.net/eng/docs/ui_puttygen)
+2. (https://winscp.net/eng/docs/guide_windows_openssh_server)
+3. (https://www.racf.bnl.gov/docs/authentication/ssh/sshkeygenwin)
+
+
+4. (http://www.ubuntugeek.com/install-and-configure-sftp-server-on-ubuntu-16-04-xenial-xerus-server.html)
+5. (https://askubuntu.com/questions/420652/how-to-setup-a-restricted-sftp-server-on-ubuntu)
+6. (http://www.tecmint.com/install-openssh-server-in-linux/)
+7. (http://articlebin.michaelmilette.com/setting-up-openssh-sftp-on-ubuntu/)
+8. (http://www.linuxtoday.com/storage/install-and-configure-sftp-server-on-ubuntu-16.04-xenial-xerus-server-160601094003.html)
+9. (https://www.google.com.co/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=configure+sftp+server+ubuntu)
+10. (https://www.youtube.com/watch?v=HCXDaGIgjcQ)
+
+- Enable SSH ang generate Keys publics and privates
+(http://pubs.vmware.com/appdirector-5/index.jsp?topic=%2Fcom.vmware.appdirector5.using.doc%2FGUID-9DE98971-C7AD-493C-AEA3-709F5C72FEBF.html)
+
+- Creation of USERS in a ubuntu with its respectly password
+(https://www.youtube.com/watch?v=39-NLKPWyTs)
+
+- Create folders with permissions of write, read files
+1. (https://askubuntu.com/questions/19898/whats-the-simplest-way-to-edit-and-add-files-to-var-www)
+2. (https://askubuntu.com/questions/6723/change-folder-permissions-and-ownership)
+3. (http://stackoverflow.com/questions/23144286/paramiko-python-ioerror-errno-13-permission-denied)
