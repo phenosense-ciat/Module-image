@@ -1,10 +1,13 @@
 # Introduction
 
-The script `SFTP.py` import Python package `pysftp`, `paramiko` and `socket` the which must have install previously in the raspberry client before of run the script `SFTP.py`. For install the Python Package can use the next lines code with permission of super user `sudo`
-```
-sudo pip install pysftp
+The script `SFTP.py` import Python package `pysftp`, `paramiko` and `socket` the which must have install previously in the raspberry client before of run the script `SFTP.py`. For install the Python Package can use the next lines code with permission of super user `sudo` and begin with next code lines.
 
 ```
+sudo apt-get update
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+sudo pip install pysftp
+```
+
 NOTE: With the first line code `sudo pip install pysftp` after installing to check with `pip list` whether the python package paramiko, crypto, socket was installed in the process. If this doesn't correct. Use the next code lines.  
 ```
 sudo pip install paramiko
