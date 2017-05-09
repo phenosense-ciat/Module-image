@@ -91,7 +91,7 @@ drwxr-xr-x 2 ubuntu ubuntu 4096 Apr 26 11:34 /transferencia/rasp
 
 # Why a SFTP in Ubuntu and not in Windows?
 
-Install and setup a SFTP server is easier in Ubuntu than in Windows because doesn't required more resource or service that only the present in this description. While in Windows is necesary download software additional for connect the SFTP server and management. In sometimes produce problems of open a close connections with the SFTP server.  Not is good closed and then is necessary disconect the SFTP server and to restart the SFTP server for a new transfer files. 
+Install and setup an SFTP server is easier about Ubuntu than in Windows because doesn't require more resource or service that only the present in this description . While in Windows is necessary download software additional for connecting the SFTP server and management . In sometimes to produce problems of open a close connections with the SFTP server . Not is good closed and then is necessary to disconnect the SFTP server and to restart the SFTP server for a new transfer files .
 
 
 # References
