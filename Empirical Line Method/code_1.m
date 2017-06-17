@@ -2,21 +2,21 @@ clear
 close all
 numpre = '05';
 pre = '-read'; %Prefijo del nombre del archivo
-suf = '.asd.txt'; %ExtenciÛn del archivo.
-begin = 1; %N˙mero inicial donde empieza las medidas espectrales NOTA: puede variarlo a conveniencia.
-data = []; %Matriz vacia donde se almacenar· la data de medidas espectrales de 325 nm a 1075 nm
-miss = []; %Matriz vacia donde se almacenar· datos espectrales que est·n olvidadas en la "data" y pasaron a ser "textdata".
+suf = '.asd.txt'; %Extenci√≥n del archivo.
+begin = 1; %N√∫mero inicial donde empieza las medidas espectrales NOTA: puede variarlo a conveniencia.
+data = []; %Matriz vacia donde se almacenar√° la data de medidas espectrales de 325 nm a 1075 nm
+miss = []; %Matriz vacia donde se almacenar√° datos espectrales que est√°n olvidadas en la "data" y pasaron a ser "textdata".
 for i = 1:10
     s = importdata(strcat(numpre,pre,num2str(begin+(i-1)),suf)); %Se importa los datos del archivo .asd.txt del ASD en variable matlab
-    if(length(s.data(:,2))<751) %Se verifica si la longitud de la matriz de la data es correcta, de lo contrario, indica que hay datos perdidos en la data y est·n en el textdata.
-        num = 751 - length(s.data(:,2)); %Se comprueba cuanta es la cantidad de datos perdidos al inicio (Se encontrÛ que los datos que se omiten en la data y pasan al textdata son los que inician desde 325 nm. Ejemplo, si faltan 3 datos en data quiere decir que en "data" faltan los datos 325, 326 y 327, los cuales estan en "textdata".
-        for j = 2:num+1 %InicializaciÛn del ciclo de llenado de la matriz miss, empieza en 2 ya que en la posiciÛn inicial de "textdata" est·n los encabezados de las columnas de "data" que son 'Wavelength' y 'SpectrumXXX.asd' Los cuales no se pueden convertir en valores numericos.
+    if(length(s.data(:,2))<751) %Se verifica si la longitud de la matriz de la data es correcta, de lo contrario, indica que hay datos perdidos en la data y est√°n en el textdata.
+        num = 751 - length(s.data(:,2)); %Se comprueba cuanta es la cantidad de datos perdidos al inicio (Se encontr√≥ que los datos que se omiten en la data y pasan al textdata son los que inician desde 325 nm. Ejemplo, si faltan 3 datos en data quiere decir que en "data" faltan los datos 325, 326 y 327, los cuales estan en "textdata".
+        for j = 2:num+1 %Inicializaci√≥n del ciclo de llenado de la matriz miss, empieza en 2 ya que en la posici√≥n inicial de "textdata" est√°n los encabezados de las columnas de "data" que son 'Wavelength' y 'SpectrumXXX.asd' Los cuales no se pueden convertir en valores numericos.
            miss = [miss;str2num(s.textdata{j}(5:end))]; %Se llena o se concatena la matriz miss, donde cada dato perdido se obvia los 4 primero caracteres del string, porque corresponden a la longitud de onda correspondiente y por el momento este dato no es necesario.
         end
-        data = [data, [miss;s.data(:,2)]]; %Finalmente la matriz se concatena con la anterior y asÌ sucesivamente.
+        data = [data, [miss;s.data(:,2)]]; %Finalmente la matriz se concatena con la anterior y as√≠ sucesivamente.
         miss = [];
     else
-        data = [data, [s.data(:,2)]]; %En caso de que la longitud del "data" estÈ correcto que sea igual que el anterior por tanto se concatena normalmente.   
+        data = [data, [s.data(:,2)]]; %En caso de que la longitud del "data" est√© correcto que sea igual que el anterior por tanto se concatena normalmente.   
     end %Fin condicional de la longitud de "data"
 end %Fin del ciclo de concatenado de las primeras 10 mediciones espectrales con 10 angulos diferentes para un solo target.
 [p,tbl,stats] = anova1(data(77:576,:)); %Se realiza en analiza del ANOVA
