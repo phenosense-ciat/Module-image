@@ -40,11 +40,11 @@ for i in range(0, 2):
 
 
     # Configurate image
-    imghsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    # imghsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-    imghsv[:, :, 2] = [[max(pixel - 25, 0) if pixel < 190 else min(pixel + 25, 255) for pixel in row] for row in
+    # imghsv[:, :, 2] = [[max(pixel - 25, 0) if pixel < 190 else min(pixel + 25, 255) for pixel in row] for row in
                        imghsv[:, :, 2]]
-    image = cv2.cvtColor(imghsv, cv2.COLOR_HSV2BGR)
+    # image = cv2.cvtColor(imghsv, cv2.COLOR_HSV2BGR)
 
     # Extract each channel
     NIR = image[:, :, 0]
