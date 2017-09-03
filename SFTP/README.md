@@ -37,7 +37,7 @@ ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
 3. Restart the SSH server.
 
 ```
-service ssh restart
+sudo service ssh restart
 ```
 
 4. Can make a copy of sshd_config with the next command
