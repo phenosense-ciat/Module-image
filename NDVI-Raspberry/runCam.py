@@ -3,7 +3,7 @@ import time
 import os
 nota = "sudo shutdown now"
 
-#adjust for where your switch is connected
+# Adjust for where your switch is connected
 buttonPin1 = 17
 pinLED = 22
 pinLED2 = 23
@@ -12,21 +12,14 @@ GPIO.setup(buttonPin1,GPIO.IN, GPIO.PUD_UP)
 GPIO.setup(pinLED,GPIO.OUT)
 GPIO.setup(pinLED2,GPIO.OUT)
 
-
+# Disable alarms 
 GPIO.setwarnings(False)
 
+# Number of frequency
 number = 100
+# Setups PWM pins 
 p = GPIO.PWM(pinLED,number)
 p1 = GPIO.PWM(pinLED2,number)
-
-##while True:
-##    #assuming the script to call is long enough we can ignore bouncing
-##    if (GPIO.input(buttonPin)):
-##        #this is the script that will be called (as root)
-##        #os.system("source /usr/local/bin/virtualenvwrapper.sh")
-##        #os.system("workon cv")
-##        os.system("python /home/pi/cam-fix-undistort.py")
-##        os.system("sudo shutdown")
 
 #Estado modo estacion
 os.system("/home/pi/.virtualenvs/cv/bin/python cam.py")
