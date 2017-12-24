@@ -1,9 +1,10 @@
-# 1. NDVI
 
-Scripts in Python and Matlab relationship with:
-Capture image.
-Image processing.
-Radiometric and Geometric calibration
+
+# 1. Content of folders
+
+Empirical line method -> Scripts of Matlab about of radiometric calibration for low-cost cameras.
+NDVI-Raspberry -> Scripts in Python for calculate of NDVI emmbedded in the Raspberry Pi Zero, 2 and 3 with instructions of use.
+SFTP -> Script in Python for sent images through SFTP protocole between Ubuntu server and Client Raspberry Pi. With instructions of use.
 
 # 2. Prepare Raspberry Pi (Zero, 2, 3)
 
