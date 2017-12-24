@@ -54,14 +54,14 @@ sudo apt-get install python2.7-dev
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
 sudo pip install numpy
-cd ~/opencv
+cd ~/opencv-3.3.0
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D INSTALL_C_EXAMPLES=OFF \
     -D INSTALL_PYTHON_EXAMPLES=ON \
-    -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
+    -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.3.0/modules \
     -D BUILD_EXAMPLES=ON ..
 make -j4
 sudo make install
@@ -78,14 +78,14 @@ sudo apt-get install python3-dev
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 sudo pip install numpy 
-cd ~/opencv
+cd ~/opencv-3.3.0
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D INSTALL_C_EXAMPLES=OFF \
     -D INSTALL_PYTHON_EXAMPLES=ON \
-    -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
+    -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.3.0/modules \
     -D BUILD_EXAMPLES=ON ..
 make -j4
 sudo make install
