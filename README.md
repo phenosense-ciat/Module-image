@@ -5,8 +5,6 @@ and in the next link (2): http://raspberrypiprogramming.blogspot.com.co/2014/08/
 
 The next is way to install OpenCV without virtual environment it is based in the link (2)
 
-require "Installing" 
-
 ### Generic stuff
 
 ```
