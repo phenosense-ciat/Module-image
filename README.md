@@ -186,6 +186,9 @@ sudo apt-get install python-picamera
 
 # References
 
+## Section 2.
+- https://www.youtube.com/watch?v=bInyVQhMp30 (Raspberry PI Automatic Login - Raspbian Jessie)
+
 ## Section 3.
 ### Reference Problem 1:
 - https://ubuntuforums.org/showthread.php?t=2296100 (Unable to uninstall "pip" in Ubuntu 15.04)
