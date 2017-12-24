@@ -84,6 +84,9 @@ sudo ldconfig
 **NOTE:** Is recommendable to use `sudo pip install numpy` instead of `pip install numpy` 
 
 ## Fix some troubles
+
+### Problem 1: one environment with `pip` installed in two versions of Python 
+
 In ocations we can have in the same environment two versions Python for example 2.7 and 3.5 in the `pip` may be installed in the version Python 3.5 and not in the Python 2.7. We can fall in the error by follow the Link(1) to use the next lines codes:
 
 ```
@@ -108,7 +111,7 @@ sudo python -m pip install [package]
 ```
 There arent problem if your objective is to install other package specificing the version of Python (2.7 or 3.x). But is a complicated situation if the case is to try install OpenCV for example. Because the rutines is designed by default (in the building) for using the `pip` that automaticly we use in Terminal or command (without to specific version Python) Finally OpenCV installs in Python 3.5 or one versioni of Python undesirable. We recommend in each environment use one unique version of Python in the possible, or create **VIRTUAL ENVIRONMENT with an only version of Python like in the Link (1) is recommended**. And if we have an environment with 2 Python version is important **check what pip of Python version we using** with the next command `pip -V`
 
-### Fix the last case: one environment with `pip` installed in two versions of Python 
+### Fix problem 1: one environment with `pip` installed in two versions of Python 
 
 Its necessary remove the `pip` of all version of Python for install the `pip` in the version Python desirable. The first is remove the version of `pip` installed that appears in the command line (Terminal). In any case if it was Python 2.7 or Python 3.5. Then suppose that was Python 3.5:
 ```
