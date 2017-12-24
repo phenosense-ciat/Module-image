@@ -29,3 +29,17 @@ Text file that contains the exposure speed of the camera, which is requested by 
 ### runCam.py
 Script that performs the same procedure `runCamEventos.py` with the difference that it does not use interrupts but works with the count of the times that happened under a magnet for the capture of photos, when the automatic count is changed four times the direction of rotation and when counting four times the detection of the magnets will stop to calculate the indices and then send the indices to ThinkSpeak and the SFTP server.
 
+# Edit crontab for execute of manner automatic the algorithm
+
+To configure the `crontab` of the Raspbian in the way manner.
+```
+sudo crontab -e
+```
+In the bottom of the file put the next lines codes.
+```
+SHELL=/bin/bash
+#PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin/:/bin:/sbin
+
+@reboot /home/pi/on_reboot.sh
+```
+with 
