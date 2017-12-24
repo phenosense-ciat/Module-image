@@ -157,6 +157,8 @@ sudo python3 get-pip.py
 ```
 
 ## References
+
+### Reference Problem 1:
 - https://ubuntuforums.org/showthread.php?t=2296100 (Unable to uninstall "pip" in Ubuntu 15.04)
 - https://stackoverflow.com/questions/30017136/bash-pip-command-not-found-for-an-install(Bash: pip: command not found for an Install)
 - https://www.youtube.com/watch?v=7zQqfNVxfj4(How to install/uninstall pip in Linux (Debian, Ubuntu, etc))
