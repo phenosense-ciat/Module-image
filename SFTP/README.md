@@ -18,6 +18,19 @@ sudo pip install paramiko
 sudo pip install socket
 ```
 
+# Install (SFTP) or library pysftp on Raspberry Pi 3 or 2 in Python 2.7
+
+### Step 1
+The following command will ensure that the required dependencies are installed:
+```
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+```
+### Step 2
+The next command install pysftp and its necessary library like paramiko (exclusive for the version pysftp) 
+```
+sudo pip install pysftp
+```
+
 # Procedure for install and run a SFTP server in Ubuntu
 1. Use of next code in the terminal of Ubuntu for install of SSH or SFTP and begin the setup.
 
