@@ -1,7 +1,11 @@
-# Installing on Rasbian Stretch Lite version
+# Order of execution of scripts.
 
-### Autologin over Raspbian Lite (Jessie or Stretch)
-First configure auto-login as use 'pi' because by default always the OS requires user and password login. 
+First initialize the script `runCam.py`, inside of it calls to `cam.py`, after calls to `ndviEstacionDemo.py` and finally calls to `SFTP.py`. 
+
+# Brief description of each script.
+
+### runCam
+
 ```
 sudo raspi-config
 ```
