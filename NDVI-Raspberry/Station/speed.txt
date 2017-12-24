@@ -1,0 +1,2 @@
+Exposure time (microseconds)
+32000
