@@ -1,9 +1,11 @@
-# Installing OPEN CV in Raspbian Stretch Lite on Raspberry Pi
+# Installing OPENCV in Raspbian Stretch Lite on Raspberry Pi
 
 Based in the next link (1): https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/
 and in the next link (2): http://raspberrypiprogramming.blogspot.com.co/2014/08/change-prompt-color-in-bash.html
 
 The next is way to install OpenCV without virtual environment it is based in the link (2)
+
+require "Installing" 
 
 ### Generic stuff
 
