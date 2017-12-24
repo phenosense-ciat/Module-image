@@ -85,28 +85,48 @@ Then pip is installed in the Python 3.5 with directory `/usr/local/lib/python3.5
 
 ### Fix the last case one environment with 2 versions of Python 
 
-It its necessary remove the `pip`of all version of Python. The first is remove the version of `pip` installed that appears in the command line. In any case if it was Python 2.7 or Python 3.5. Then suppose that was Python 3.5
-
+Its necessary remove the `pip`of all version of Python for install the `pip` in the version Python desirable. The first is remove the version of `pip` installed that appears in the command line (Terminal). In any case if it was Python 2.7 or Python 3.5. Then suppose that was Python 3.5:
 ```
 pip uninstall pip
 ```
-After uninstall pip of the version Python 2.7
+After uninstall `pip` of the version Python 2.7 with:
 ```
 sudo python -m  pip uninstall pip
 ```
-Last, uninstall the pip of the version Python 2.7 what prohibit to install the `pip` in the Python version desirable. 
+Last, uninstall the pip of the version Python 2.7 what prohibit to reinstall the `pip` in the Python version desirable. 
 ```
 sudo apt-get purge --auto-remove python-pip
 ```
-This manner remove `pip`of all Python versions. Now we can begin install the `pip` in the desirable version Python. Suppose that the desirable version Python is 2.7
+This manner remove `pip` of all Python versions. Now we can begin install the `pip` in the desirable version Python. Suppose that the desirable version Python is 2.7
 ```
 sudo apt-get install python2.7-dev
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
 ```
 Now, if we use `pip -V` is installed in the correct location:
-`/usr/local/lib/python2.7/dist-packages   (python2.7)`
+```
+/usr/local/lib/python2.7/dist-packages   (python2.7)
+```
 
+Now if the case is the reverse. Suppose what `pip` is the Python 2.7, then use:
+```
+pip uninstall pip
+```
+After use:
+```
+sudo python3 -m  pip uninstall pip
+```
+By last
+```
+sudo apt-get purge --auto-remove python3-pip
+```
+Therefore we can install `pip` in the desirable version Python in this case the Python 3.5
+
+```
+sudo apt-get install python3-dev
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3 get-pip.py
+```
 
 # NDVI
 
