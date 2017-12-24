@@ -56,6 +56,7 @@ make -j4
 sudo make install
 sudo ldconfig
 ```
+**NOTE:** Is recommendable to use `sudo pip install numpy` instead of `pip install numpy` 
 
 or 
 
