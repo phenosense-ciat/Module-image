@@ -76,9 +76,9 @@ sudo ldconfig
 In ocations we can have in the same environment two versions Python for example 2.7 and 3.5 in the `pip` may be installed in the version Python 3.5 and not in the Python 2.7. We can fall in the error by follow the Link(1) to use the next lines codes:
 
 ``
-$ wget https://bootstrap.pypa.io/get-pip.py
-$ sudo python get-pip.py
-$ sudo python3 get-pip.py
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+sudo python3 get-pip.py
 ``
 
 Then pip is installed in the Python 3.5 with directory `/usr/local/lib/python3.5/dist-packages` and when you used `pip install` any packages is installed in the Python 3.5 (for example `pip install numpy` is installed in Python 3.5 and not in Python 2.7) The next error to try install the pip in the Python 2.7 besides of has installed `pip` in Python 3.5 with the next command `sudo apt-get install python-pip`. Then the `pip`is installed in Python 2.7 but we have careful because to use `pip` directly in command line will follow installed the packages in the pip of the version of Python 3.5, for install some package with the pip of the Python 2.7 use the next command `sudo python -m pip install [package]`. There arent problem if your objective is to install other package specificing the version of Python but is complicated in the case to install OpenCV for example because in the rutines by default (in the building) uses pip in first instance and then OpenCV finally to install in Python 3.5 or one versioni of Python undeseareble. We recommend in each environment use one version of Python, or create VIRTUAL ENVIRONMENT with an only version of Python like in the Link (1) is recommended. And if we have an environment with 2 Python version is important check what pip of Python do we using with the next command `pip -V`
