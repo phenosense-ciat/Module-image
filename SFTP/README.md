@@ -26,11 +26,15 @@ The following command will ensure that the required dependencies are installed:
 sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 ```
 ### Step 2
-The next command install pysftp and its necessary library like paramiko (exclusive for the version pysftp) 
+The next command install pysftp and its necessary libraries correspondent like paramiko, bcrypt, cffi, pycparser, pynacl (exclusives for the version pysftp) 
 ```
 sudo pip install pysftp
 ```
-
+### Step 3
+Finally, to install socket
+```
+sudo pip install socket
+```
 # Procedure for installing and run a SFTP server in Ubuntu
 1. Use of next code in the terminal of Ubuntu for install of SSH or SFTP and begin the setup.
 
