@@ -27,27 +27,25 @@ and in the next link (2): http://raspberrypiprogramming.blogspot.com.co/2014/08/
 The next is way to install OpenCV without virtual environment it is based in the link (2)
 
 ## Generic stuff
-
+This is a generic sequence that apply in any case of Raspian Lite and not Lite, Jessie or Stretch, Raspberry Pi Zero, 2 or 3. 
 ```
 sudo apt-get update
 sudo apt-get upgrade
 sudo rpi-update
 sudo reboot
-sudo apt-get install build-essential git cmake pkg-config
+sudo apt-get install build-essential cmake pkg-config
 sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
 sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get install libxvidcore-dev libx264-dev
-sudo apt-get install libgtk2.0-dev
+sudo apt-get install libgtk2.0-dev libgtk-3-dev
 sudo apt-get install libatlas-base-dev gfortran
 cd ~
-git clone https://github.com/Itseez/opencv.git
-cd opencv
-git checkout 3.1.0
-cd ~
-git clone https://github.com/Itseez/opencv_contrib.git
-cd opencv_contrib
-git checkout 3.1.0
+wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.3.0.zip
+unzip opencv.zip
+wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.3.0.zip
+unzip opencv_contrib.zip
 ```
+The version of OpenCV can be changed, in this case the stable version was OpenCV-3.2.0, We recommend work with the stable version in the moment.
 
 ## If you want to use OpenCV with python 2.7 :
 **See note** of `pip install numpy`
@@ -55,7 +53,7 @@ git checkout 3.1.0
 sudo apt-get install python2.7-dev
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
-pip install numpy
+sudo pip install numpy
 cd ~/opencv
 mkdir build
 cd build
@@ -79,7 +77,7 @@ or
 sudo apt-get install python3-dev
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
-pip install numpy 
+sudo pip install numpy 
 cd ~/opencv
 mkdir build
 cd build
