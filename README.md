@@ -5,8 +5,21 @@ Capture image.
 Image processing.
 Radiometric and Geometric calibration
 
+# 2. Prepare Raspberry Pi (Zero, 2, 3)
 
-# 2. Installing OpenCV in Raspbian Stretch Lite on Raspberry Pi 3
+## Autologin if the version of Raspbian is Lite (Jessie or Stretch)
+First configure auto-login as use 'pi' because by default always the OS requires user and password login. 
+```
+sudo raspi-config
+```
+After select the option 3.' Boot Options', after option B1. 'Desktop / CLI' finally choose option B2 "Console Autologin - Text console, automacally logged in as 'pi' user"
+
+**NOTE:** If the version of Raspbian is not Lite (its means GUI Graphic-Desktop) the above is not necessary by default is Autologged.  
+
+## Enable interface
+We must have enable all interfaces by recommendation with `sudo raspi-config` in the option 'Interfaces' to enable GPIO remote, camera, I2C, 1-Wire, SPI, SSH, VNC, serial. If we the Desktop version in the task-bar in the symbol of left 'raspberry' in the submenu Accesories is the option 'Raspi-config'
+
+# 3. Installing OpenCV in Raspbian Lite (Jessie, Stretch) on Raspberry Pi Zero, 2 or 3
 
 Based in the next link (1): https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/
 and in the next link (2): http://raspberrypiprogramming.blogspot.com.co/2014/08/change-prompt-color-in-bash.html
@@ -156,8 +169,24 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 ```
 
-## References
+# 4. Other libraries neccesary
 
+After of the installation of OpenCV install the next.
+
+Library 'request' for sending of dates of NDVI to portal web through ThinkSpeak 
+```
+sudo apt-get update
+sudo apt-get install python-requests
+```
+Picamera
+```
+sudo apt-get install python-picamera
+```
+
+
+# References
+
+## Section 3.
 ### Reference Problem 1:
 - https://ubuntuforums.org/showthread.php?t=2296100 (Unable to uninstall "pip" in Ubuntu 15.04)
 - https://stackoverflow.com/questions/30017136/bash-pip-command-not-found-for-an-install(Bash: pip: command not found for an Install)
@@ -165,3 +194,9 @@ sudo python3 get-pip.py
 - https://stackoverflow.com/questions/34803040/how-to-run-pip-of-different-version-of-python-using-python-command(How to run pip of different version of python using python command?)
 - https://stackoverflow.com/questions/11268501/how-to-use-pip-with-python-3-x-alongside-python-2-x (How to use pip with Python 3.x alongside Python 2.x
 )
+
+## Section 4.
+- https://www.raspberrypi.org/forums/viewtopic.php?f=91&t=79312 (
+Trying to use the requests library)
+- https://www.raspberrypi.org/documentation/usage/camera/python/README.md (Picamera Installation)
+- https://picamera.readthedocs.io/en/release-1.13/install.html (Picamera Installation)
