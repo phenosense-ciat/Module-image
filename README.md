@@ -1,4 +1,12 @@
-# Installing OpenCV in Raspbian Stretch Lite on Raspberry Pi
+# 1. NDVI
+
+Scripts in Python and Matlab relationship with:
+Capture image.
+Image processing.
+Radiometric and Geometric calibration
+
+
+# 2. Installing OpenCV in Raspbian Stretch Lite on Raspberry Pi
 
 Based in the next link (1): https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/
 and in the next link (2): http://raspberrypiprogramming.blogspot.com.co/2014/08/change-prompt-color-in-bash.html
@@ -29,7 +37,7 @@ git checkout 3.1.0
 ```
 
 ### If you want to use OpenCV with python 2.7 :
-
+**See note** of `pip install numpy`
 ```
 sudo apt-get install python2.7-dev
 wget https://bootstrap.pypa.io/get-pip.py
@@ -52,12 +60,12 @@ sudo ldconfig
 or 
 
 ### If you want to use OpenCV with python 3 :
-
+**See note** of `pip install numpy`
 ```
 sudo apt-get install python3-dev
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
-pip install numpy
+pip install numpy 
 cd ~/opencv
 mkdir build
 cd build
@@ -72,6 +80,8 @@ sudo make install
 sudo ldconfig
 ```
 
+**NOTE:** Is recommendable to use `sudo pip install numpy` instead of `pip install numpy` 
+
 ## Fix some troubles
 In ocations we can have in the same environment two versions Python for example 2.7 and 3.5 in the `pip` may be installed in the version Python 3.5 and not in the Python 2.7. We can fall in the error by follow the Link(1) to use the next lines codes:
 
@@ -81,11 +91,25 @@ sudo python get-pip.py
 sudo python3 get-pip.py
 ```
 
-Then pip is installed in the Python 3.5 with directory `/usr/local/lib/python3.5/dist-packages` and when you used `pip install` any packages is installed in the Python 3.5 (for example `pip install numpy` is installed in Python 3.5 and not in Python 2.7) The next error to try install the pip in the Python 2.7 besides of has installed `pip` in Python 3.5 with the next command `sudo apt-get install python-pip`. Then the `pip`is installed in Python 2.7 but we have careful because to use `pip` directly in command line will follow installed the packages in the pip of the version of Python 3.5, for install some package with the pip of the Python 2.7 use the next command `sudo python -m pip install [package]`. There arent problem if your objective is to install other package specificing the version of Python but is complicated in the case to install OpenCV for example because in the rutines by default (in the building) uses pip in first instance and then OpenCV finally to install in Python 3.5 or one versioni of Python undeseareble. We recommend in each environment use one version of Python, or create VIRTUAL ENVIRONMENT with an only version of Python like in the Link (1) is recommended. And if we have an environment with 2 Python version is important check what pip of Python do we using with the next command `pip -V`
+Then `pip` is installed in the Python 3.5 with directory `/usr/local/lib/python3.5/dist-packages` and when you used 
+```
+pip install [package]
+```
+any packages is installed in the Python 3.5 (for example `pip install numpy` is installed in Python 3.5 and not in Python 2.7). Sometimes the next common error to try install the `pip` in the Python 2.7 besides to have installed `pip` in Python 3.5 with the next command:
+```
+sudo apt-get install python-pip
+```
+Then the `pip` is installed in Python 2.7 but we have that to be careful when we use `pip` directly in command line in this situation. Because the package will follow installed in the `pip` of the version of Python 3.5. 
 
-### Fix the last case one environment with 2 versions of Python 
+For install some package with the `pip` of the Python 2.7 use the next command 
+```
+sudo python -m pip install [package]
+```
+There arent problem if your objective is to install other package specificing the version of Python (2.7 or 3.x). But is a complicated situation if the case is to try install OpenCV for example. Because the rutines is designed by default (in the building) for using the `pip` that automaticly we use in Terminal or command (without to specific version Python) Finally OpenCV installs in Python 3.5 or one versioni of Python undesirable. We recommend in each environment use one unique version of Python in the possible, or create **VIRTUAL ENVIRONMENT with an only version of Python like in the Link (1) is recommended**. And if we have an environment with 2 Python version is important **check what pip of Python version we using** with the next command `pip -V`
 
-Its necessary remove the `pip`of all version of Python for install the `pip` in the version Python desirable. The first is remove the version of `pip` installed that appears in the command line (Terminal). In any case if it was Python 2.7 or Python 3.5. Then suppose that was Python 3.5:
+### Fix the last case: one environment with Pip installed in two versions of Python 
+
+Its necessary remove the `pip` of all version of Python for install the `pip` in the version Python desirable. The first is remove the version of `pip` installed that appears in the command line (Terminal). In any case if it was Python 2.7 or Python 3.5. Then suppose that was Python 3.5:
 ```
 pip uninstall pip
 ```
@@ -128,9 +152,10 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 ```
 
-# NDVI
-
-Scripts in Python and Matlab relationship with:
-Capture image.
-Image processing.
-Radiometric and Geometric calibration
+###References
+- https://ubuntuforums.org/showthread.php?t=2296100 (Unable to uninstall "pip" in Ubuntu 15.04)
+- https://stackoverflow.com/questions/30017136/bash-pip-command-not-found-for-an-install(Bash: pip: command not found for an Install)
+- https://www.youtube.com/watch?v=7zQqfNVxfj4(How to install/uninstall pip in Linux (Debian, Ubuntu, etc))
+- https://stackoverflow.com/questions/34803040/how-to-run-pip-of-different-version-of-python-using-python-command(How to run pip of different version of python using python command?)
+- https://stackoverflow.com/questions/11268501/how-to-use-pip-with-python-3-x-alongside-python-2-x (How to use pip with Python 3.x alongside Python 2.x
+)
