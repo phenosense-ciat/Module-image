@@ -48,7 +48,7 @@ unzip opencv_contrib.zip
 The version of OpenCV can be changed, in this case the stable version was OpenCV-3.2.0, We recommend work with the stable version in the moment.
 
 ## If you want to use OpenCV with python 2.7 :
-**See note** of `pip install numpy`
+**See note** of `sudo pip install numpy`
 ```
 sudo apt-get install python2.7-dev
 wget https://bootstrap.pypa.io/get-pip.py
@@ -67,12 +67,12 @@ make -j4
 sudo make install
 sudo ldconfig
 ```
-**NOTE:** Is recommendable to use `sudo pip install numpy` instead of `pip install numpy` 
+**NOTE:** Is recommendable to use `sudo pip install numpy` instead of `pip install numpy`. Because in the mode superuser we can access certain directories that we can write without constraints.
 
 or 
 
 ## If you want to use OpenCV with python 3 :
-**See note** of `pip install numpy`
+**See note** of `sudo pip install numpy`
 ```
 sudo apt-get install python3-dev
 wget https://bootstrap.pypa.io/get-pip.py
@@ -92,7 +92,7 @@ sudo make install
 sudo ldconfig
 ```
 
-**NOTE:** Is recommendable to use `sudo pip install numpy` instead of `pip install numpy` 
+**NOTE:** Is recommendable to use `sudo pip install numpy` instead of `pip install numpy`. Because in the mode superuser we can access certain directories that we can write without constraints. 
 
 ## Fix some troubles
 
