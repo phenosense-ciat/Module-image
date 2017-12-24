@@ -169,7 +169,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 ```
 
-# 4. Other libraries neccesary
+# 4. Other necessary libraries
 
 After of the installation of OpenCV install the next.
 
