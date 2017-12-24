@@ -6,7 +6,7 @@ Image processing.
 Radiometric and Geometric calibration
 
 
-# 2. Installing OpenCV in Raspbian Stretch Lite on Raspberry Pi
+# 2. Installing OpenCV in Raspbian Stretch Lite on Raspberry Pi 3
 
 Based in the next link (1): https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/
 and in the next link (2): http://raspberrypiprogramming.blogspot.com.co/2014/08/change-prompt-color-in-bash.html
