@@ -16,7 +16,7 @@ After select the option 3.' Boot Options', after option B1. 'Desktop / CLI' fina
 
 **NOTE:** If the version of Raspbian is not Lite (its means GUI Graphic-Desktop) the above is not necessary by default is Autologged.  
 
-## Enable interface
+## Enable interfaces
 We must have enable all interfaces by recommendation with `sudo raspi-config` in the option 'Interfaces' to enable GPIO remote, camera, I2C, 1-Wire, SPI, SSH, VNC, serial. If we the Desktop version in the task-bar in the symbol of left 'raspberry' in the submenu Accesories is the option 'Raspi-config'
 
 # 3. Installing OpenCV in Raspbian Lite (Jessie, Stretch) on Raspberry Pi Zero, 2 or 3
