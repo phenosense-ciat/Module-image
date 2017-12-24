@@ -13,7 +13,7 @@ and in the next link (2): http://raspberrypiprogramming.blogspot.com.co/2014/08/
 
 The next is way to install OpenCV without virtual environment it is based in the link (2)
 
-### Generic stuff
+## Generic stuff
 
 ```
 sudo apt-get update
@@ -36,7 +36,7 @@ cd opencv_contrib
 git checkout 3.1.0
 ```
 
-### If you want to use OpenCV with python 2.7 :
+## If you want to use OpenCV with python 2.7 :
 **See note** of `pip install numpy`
 ```
 sudo apt-get install python2.7-dev
@@ -59,7 +59,7 @@ sudo ldconfig
 
 or 
 
-### If you want to use OpenCV with python 3 :
+## If you want to use OpenCV with python 3 :
 **See note** of `pip install numpy`
 ```
 sudo apt-get install python3-dev
@@ -152,7 +152,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 ```
 
-### References
+## References
 - https://ubuntuforums.org/showthread.php?t=2296100 (Unable to uninstall "pip" in Ubuntu 15.04)
 - https://stackoverflow.com/questions/30017136/bash-pip-command-not-found-for-an-install(Bash: pip: command not found for an Install)
 - https://www.youtube.com/watch?v=7zQqfNVxfj4(How to install/uninstall pip in Linux (Debian, Ubuntu, etc))
