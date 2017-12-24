@@ -75,11 +75,11 @@ sudo ldconfig
 ## Fix some troubles
 In ocations we can have in the same environment two versions Python for example 2.7 and 3.5 in the `pip` may be installed in the version Python 3.5 and not in the Python 2.7. We can fall in the error by follow the Link(1) to use the next lines codes:
 
-``
+```
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
 sudo python3 get-pip.py
-``
+```
 
 Then pip is installed in the Python 3.5 with directory `/usr/local/lib/python3.5/dist-packages` and when you used `pip install` any packages is installed in the Python 3.5 (for example `pip install numpy` is installed in Python 3.5 and not in Python 2.7) The next error to try install the pip in the Python 2.7 besides of has installed `pip` in Python 3.5 with the next command `sudo apt-get install python-pip`. Then the `pip`is installed in Python 2.7 but we have careful because to use `pip` directly in command line will follow installed the packages in the pip of the version of Python 3.5, for install some package with the pip of the Python 2.7 use the next command `sudo python -m pip install [package]`. There arent problem if your objective is to install other package specificing the version of Python but is complicated in the case to install OpenCV for example because in the rutines by default (in the building) uses pip in first instance and then OpenCV finally to install in Python 3.5 or one versioni of Python undeseareble. We recommend in each environment use one version of Python, or create VIRTUAL ENVIRONMENT with an only version of Python like in the Link (1) is recommended. And if we have an environment with 2 Python version is important check what pip of Python do we using with the next command `pip -V`
 
@@ -87,23 +87,23 @@ Then pip is installed in the Python 3.5 with directory `/usr/local/lib/python3.5
 
 It its necessary remove the `pip`of all version of Python. The first is remove the version of `pip` installed that appears in the command line. In any case if it was Python 2.7 or Python 3.5. Then suppose that was Python 3.5
 
-``
+```
 pip uninstall pip
-``
+```
 After uninstall pip of the version Python 2.7
-``
+```
 sudo python -m  pip uninstall pip
-``
+```
 Last, uninstall the pip of the version Python 2.7 what prohibit to install the `pip` in the Python version desirable. 
-``
+```
 sudo apt-get purge --auto-remove python-pip
-``
+```
 This manner remove `pip`of all Python versions. Now we can begin install the `pip` in the desirable version Python. Suppose that the desirable version Python is 2.7
-``
+```
 sudo apt-get install python2.7-dev
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
-``
+```
 Now, if we use `pip -V` is installed in the correct location:
 `/usr/local/lib/python2.7/dist-packages   (python2.7)`
 
