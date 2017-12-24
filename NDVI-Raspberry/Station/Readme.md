@@ -12,7 +12,7 @@ Execute a rutine where the capture and save photos without distortion the which 
 Script that capture a photo from the camera of the Raspberry and fix the distortion with OpenCV library generate by the build of the lens of the camera. Finally, it saves the picture in the Raspberry Pi. 
 
 ### ndviEstationDemo.py
-Script that has two options read a image saved in the device or take directly a picture from camera and apply a radiometric correction through the Empirical Line Method. Finally, the index is calculated and this is saved in the text file named 'ndvi.txt' and only when the four indices was calculated they are sent to ThinkSpeak.
+Script that has two options read a image saved in the device or take directly a picture from camera and apply a radiometric correction through the Empirical Line Method. Finally, the index is calculated and this is saved in the text file named `ndvi.txt` and only when the four indices was calculated they are sent to ThinkSpeak.
 
 ### SFTP.py
 Script that sends the images to server machine trough SFTP protocole.
@@ -27,5 +27,5 @@ File .sh that contains the library paths that allow to initialize the script of 
 Text file that contains the exposure speed of the camera, which is requested by the `cam.py` script or `ndviEstationDemo.py`. Therefore, it is a file that should not be deleted. It is useful when working under a graphic environment because you can edit this number easily without entering the thick code to change the exposure speed of the camera, because this file is read automatically
 
 ### runCam.py
-Script that performs the same procedure runCamEventos.py with the difference that it does not use interrupts but works with the count of the times that happened under a magnet for the capture of photos, when the automatic count is changed four times the direction of rotation and When counting four times the detection of the magnets will stop to calculate the indices and then send the indices to ThinkSpeak and the SFTP server.
+Script that performs the same procedure `runCamEventos.py` with the difference that it does not use interrupts but works with the count of the times that happened under a magnet for the capture of photos, when the automatic count is changed four times the direction of rotation and when counting four times the detection of the magnets will stop to calculate the indices and then send the indices to ThinkSpeak and the SFTP server.
 
