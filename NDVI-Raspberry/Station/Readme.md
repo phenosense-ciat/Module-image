@@ -21,7 +21,7 @@ Script that sends the images to server machine trough SFTP protocole.
 Text file that allows you to keep track of how many photos have been taken and how many photos have been processed.
 
 ### on_reboot.sh
-File .sh that contains the library paths that allow to initialize the script of `runCam.py` or `runCamEventos.py` in the boot configured by the `crontab`. Either for a Raspberry Pi with a virtual environment or without it.
+File .sh that contains the library paths that allow to initialize the script of `runCam.py` or `runCamEventos.py` in the boot configured by the `crontab`. Either for a Raspberry Pi with a virtual environment or without it. This file we have to creat it with the instructions of the next section. We not recommend download or use this file of the repository.
 
 ### speed.txt
 Text file that contains the exposure speed of the camera, which is requested by the `cam.py` script or `ndviEstationDemo.py`. Therefore, it is a file that should not be deleted. It is useful when working under a graphic environment because you can edit this number easily without entering the thick code to change the exposure speed of the camera, because this file is read automatically
