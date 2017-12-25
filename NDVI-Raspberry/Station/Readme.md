@@ -39,19 +39,18 @@ Before we can execute our Python script on reboot, we first need to create a she
 - **Executes our Python script**. This is where all the action happens. We need to (1) change directory to where our Python script lives and (2) execute it
 
 Therefore the optional point can be avoid but not the second part, then we can create a shell script to execute the Python script without virtual environment.
-
-we create a shell script named `on_reboot.sh`. For the case without **virtual environment** or even had but not use it in the shell script because is invoked inside of the Python script. 
+#### case 1
+we create a shell script named `on_reboot.sh`. For the case **without virtual environment** or even sill having created it but not use it in the shell script because inside of the Python script we can call and execute inside of such virtual environment. 
 ```
 #!/bin/bash
-PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 
 cd /home/pi
 python runCamEventos.py
 ```
+#### case 2
 When we have a **virtual environment**. We use the next commands.
 ```
 #!/bin/bash
-PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 
 source /home/pi/.profile
 workon cv
@@ -60,7 +59,7 @@ python runCamEventos.py
 ```
 where (cv) is a **virtual environment** with a specific Python version.
 
-After adding these lines to to your `on_reboot.sh` , save the file and then. Then, to make it executable, you’ll need to chmod  it:
+After adding these lines to to your `on_reboot.sh` , save the file and then. Then, to make it executable, you’ll need to `chmod`  it:
 ```
 chmod +x on_reboot.sh
 ```
@@ -76,12 +75,47 @@ sudo crontab -e
 ```
 In the bottom of the file put the next lines codes.
 ```
-SHELL=/bin/bash
-#PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin/:/bin:/sbin
-
 @reboot /home/pi/on_reboot.sh
 ```
 Once you have finished editing the crontab, save the file and exit the editor — the changes to crontab will be automatically applied. Then at next reboot, the `on_reboot.sh`  script will be automatically executed.
+
+### Some problems when we create the launcher
+In ocations we can have problems when we create the launcher, not working still good done the steps of previous section. One reason is due to previous installations done in the Raspberry Pi by other projects, experiments, hoobies and could to change, to edit or to damage the PATH without knowing us, therefore this launcher maybe not working. One manner of fix this problem is add other code lines to `on_reboot.sh` in the `crontab`.
+#### case 1
+Edit `on_reboot.sh` this way :
+```
+#!/bin/bash
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+
+cd /home/pi
+python runCamEventos.py
+```
+#### case 2
+When we have a **virtual environment**.
+```
+#!/bin/bash
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+
+source /home/pi/.profile
+workon cv
+cd /home/pi
+python runCamEventos.py
+```
+where (cv) is a **virtual environment** with a specific Python version.
+
+In the `crontab` edit it in the bottom of the file of the next way. 
+But before remember for editing `crontab` use in the terminal
+```
+sudo crontab -e
+```
+After edit it
+```
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin/:/bin:/sbin
+
+@reboot /home/pi/on_reboot.sh
+```
+We emphasize that it is not the correct way to fix the damage, the correct thing is to fix the PATH to what it was before modifying it so that in future installations of libraries or execution of Python scripts do not have any inconveniences. What has been done is a solution that works quite well but maybe it only serves for this project and not for others.
 
 # Reference
 ### Section 3:
