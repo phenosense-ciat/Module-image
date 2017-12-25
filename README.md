@@ -170,16 +170,17 @@ sudo python3 get-pip.py
 
 # 4. Other necessary libraries
 
-After of the installation of OpenCV install the next.
+After of the installation of OpenCV it is necessary install the next libraries.
 
-Library 'request' for sending of dates of NDVI to portal web through ThinkSpeak 
+The `request` library for sending of dates of NDVI to portal web through ThinkSpeak 
 ```
 sudo apt-get update
 sudo apt-get install python-requests
 ```
-Picamera
+Picamera and RPi.GPIO of the Raspberry Pi Zero, 2 or 3 that allows use this interfaces
 ```
 sudo apt-get install python-picamera
+sudo apt-get install python-rpi.gpio
 ```
 
 # 5. Download this repository in the Raspberry Pi Zero, 2 or 3
