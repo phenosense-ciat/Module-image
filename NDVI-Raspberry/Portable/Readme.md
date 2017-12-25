@@ -30,6 +30,9 @@ To know the distribution of pinouts of the Adafruit FeatherWing OLED is in the n
 The wiring is following the next tutorial: https://learn.adafruit.com/ssd1306-oled-displays-with-raspberry-pi-and-beaglebone-black/wiring
 
 ### Dependencies
+
+Based in the link: https://learn.adafruit.com/ssd1306-oled-displays-with-raspberry-pi-and-beaglebone-black/usage
+
 Before using the library you will need to make sure you have a few dependencies installed. Connect to your device using SSH and follow the steps below.
 
 If you're using a Raspberry Pi, install the RPi.GPIO library by executing:
