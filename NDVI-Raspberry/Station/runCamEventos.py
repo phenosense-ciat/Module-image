@@ -50,7 +50,7 @@ try:
     p1.stop()
     #Point control flag 2
     #print("Flag 2")
-    for x range (1,5):
+    for x in range (1,5):
         #This prints are point controls in case of bad behaviour. This must have activated.
         #Uncomment this line of code and comment on the following if you are working with a virtual environment. Otherwise do not take any action.
         #os.system('/home/pi/.virtualenvs/cv/bin/python ndviEstacionDemo.py')
