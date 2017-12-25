@@ -7,7 +7,8 @@ First initialize the script `runCamEventos.py`, inside of it calls to `cam.py`, 
 
 # 2. Brief description of each script.
 We describe briefly each script that must has to be in the station, each script has its respect comments where explain in details each  code line.
-The scripts must has to be in the station are:
+
+The scripts that must to be in the station are:
 ```
 runCamEventos.py
 cam.py
