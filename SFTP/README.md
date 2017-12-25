@@ -1,10 +1,10 @@
 # Overview
 
-Download all files and execute the script `run_script.py` this call to `SFTPPhenosense.py` that has the rutine of SFTP connection.
+Download the file and execute the script `my_SFTP.py` the which has the rutine of SFTP connection.
 
 # Introduction
 
-The script `SFTPPhenosense.py` import Python package `pysftp`, `paramiko` and `socket` the which must have install previously in the raspberry client before of run the script `SFTP.py`. For install the Python Package can use the next lines code with permission of super user `sudo` and begin with next code lines.
+The script `my_SFTP.py` import Python package `pysftp`, `paramiko` and `socket` the which must have install previously in the raspberry client before of run the script `my_SFTP.py`. For install `pysftp` Python Package we can use the next code lines with permission of super user `sudo` :
 
 ```
 sudo apt-get update
