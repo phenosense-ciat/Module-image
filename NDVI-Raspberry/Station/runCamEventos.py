@@ -29,7 +29,9 @@ p1 = GPIO.PWM(pinLED2,number)
 
 def my_foto(channel):
     p.stop()
-    os.system("/home/pi/.virtualenvs/cv/bin/python cam.py")
+    # Uncomment this line of code and comment on the following if you are working with a virtual environment. Otherwise do not take any action.
+    #os.system("/home/pi/.virtualenvs/cv/bin/python cam.py")
+    os.system("sudo python cam.py")
     p.start(velocity)
     #time.sleep(0.3)
 
@@ -48,15 +50,12 @@ try:
     p1.stop()
     #Point control flag 2
     #print("Flag 2")
-    #This prints are point controls in case of bad behaviour. This must have activated
-    os.system('/home/pi/.virtualenvs/cv/bin/python ndviEstacionDemo.py')
-    print("first process")
-    os.system('/home/pi/.virtualenvs/cv/bin/python ndviEstacionDemo.py')
-    print("second process")
-    os.system('/home/pi/.virtualenvs/cv/bin/python ndviEstacionDemo.py')
-    print("third process")
-    os.system('/home/pi/.virtualenvs/cv/bin/python ndviEstacionDemo.py')
-    print("fourth process")
+    for x range (1,5):
+        #This prints are point controls in case of bad behaviour. This must have activated.
+        #Uncomment this line of code and comment on the following if you are working with a virtual environment. Otherwise do not take any action.
+        #os.system('/home/pi/.virtualenvs/cv/bin/python ndviEstacionDemo.py')
+        os.system('sudo python ndviEstacionDemo.py')
+        print("process_"+str(x))        
     #os.system('sudo python SFTPtutorial7.py')
     print("Envio por sftp")
     os.system(nota)
