@@ -1,8 +1,8 @@
-# Order of execution of scripts.
+# 1. Order of execution of scripts.
 
 First initialize the script `runCamEventos.py`, inside of it calls to `cam.py`, after calls to `ndviEstacionDemo.py` and finally calls to `SFTP.py`. 
 
-# Brief description of each script.
+# 2. Brief description of each script.
 Here a brief description of each file in the station, each script has its respect comments where explain in details each line of code.
 
 ### runCamEventos.py
@@ -29,9 +29,48 @@ Text file that contains the exposure speed of the camera, which is requested by 
 ### runCam.py
 Script that performs the same procedure `runCamEventos.py` with the difference that it does not use interrupts but works with the count of the times that happened under a magnet for the capture of photos, when the automatic count is changed four times the direction of rotation and when counting four times the detection of the magnets will stop to calculate the indices and then send the indices to ThinkSpeak and the SFTP server.
 
-# Edit crontab for execute of manner automatic the algorithm
+# 3. Running a Python + OpenCV script on reboot
+The developed here is based in this source: https://www.pyimagesearch.com/2016/05/16/running-a-python-opencv-script-on-reboot/
 
-To configure the `crontab` of the Raspbian in the way manner.
+### Create launcher
+Before we can execute our Python script on reboot, we first need to create a shell script that performs two important tasks:
+
+- **(Optional) Accesses our Python virtual environment**. I’ve marked this step as optional only because in some cases, you may not be using a Python virtual environment. But if you’ve followed any of the OpenCV install tutorials on this blog, then this step is not optional since your OpenCV bindings are stored in a virtual environment.
+- **Executes our Python script**. This is where all the action happens. We need to (1) change directory to where our Python script lives and (2) execute it
+
+Therefore the optional point can be avoid but not the second part, then we can create a shell script to execute the Python script without virtual environment.
+
+we create a shell script named `on_reboot.sh` for the case without virtual environment
+```
+#!/bin/bash
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+
+cd /home/pi
+python runCamEventos.py
+```
+When we have a virtual environment. We use the next commands.
+```
+#!/bin/bash
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+
+source /home/pi/.profile
+workon cv
+cd /home/pi
+python runCamEventos.py
+```
+where (cv) is a virtual environment with a specific Python version.
+
+After adding these lines to to your `on_reboot.sh` , save the file and then. Then, to make it executable, you’ll need to chmod  it:
+```
+chmod +x on_reboot.sh
+```
+After changing the permissions of the file to executable.
+
+### Edit crontab for execute the shell script
+
+Now that we have defined the `on_reboot.sh`  shell script, let’s update the crontab to call it on system reboot.
+
+Simply start by executing the following command to edit the root user’s crontab:
 ```
 sudo crontab -e
 ```
@@ -42,4 +81,8 @@ SHELL=/bin/bash
 
 @reboot /home/pi/on_reboot.sh
 ```
-with 
+Once you have finished editing the crontab, save the file and exit the editor — the changes to crontab will be automatically applied. Then at next reboot, the `on_reboot.sh`  script will be automatically executed.
+
+# Reference
+### Section 3:
+- https://www.pyimagesearch.com/2016/05/16/running-a-python-opencv-script-on-reboot/ (Running a Python + OpenCV script on reboot)
