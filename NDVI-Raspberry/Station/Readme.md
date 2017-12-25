@@ -14,7 +14,7 @@ Script that capture a photo from the camera of the Raspberry and fix the distort
 ### ndviEstationDemo.py
 Script that has two options read a image saved in the device or take directly a picture from camera and apply a radiometric correction through the Empirical Line Method. Finally, the index is calculated and this is saved in the text file named `ndvi.txt` and only when the four indices was calculated they are sent to ThinkSpeak.
 
-### SFTP.py
+### my_SFTP.py
 Script that sends the images to server machine trough SFTP protocole.
 
 ### conteo.txt
