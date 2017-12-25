@@ -205,7 +205,7 @@ sudo cp Module-image/NDVI-Raspberry/Station/speed.txt /home/pi
 cd ~
 ls
 ```
-The command `ls` show the files in the current folder and `cd ~` return to default folder that always is `home/pi`
+The command `ls` show the files in the current folder and `cd ~` return to default folder that always is `/home/pi`
 
 # 6. Edit files in Raspbian Jessie or Stretch Lite
 When we want edit, create files Python scripts, text files, shell scripts in this SO. We have to use `sudo nano`. For example
@@ -216,7 +216,7 @@ or
 ```
 sudo nano runCamEventos.py
 ```
-In any case if the file nonexist Raspbian create an empty file, if the file exist Raspbian will allow to do modification on it.
+In any case if the file nonexist Raspbian create an empty file. But if the file exist Raspbian will allow to do modification on it.
 
 # References
 
