@@ -182,6 +182,40 @@ Picamera
 sudo apt-get install python-picamera
 ```
 
+# 5. Download this repository in the Raspberry Pi Zero, 2 or 3
+
+First install the git in the Raspbian (Jessie, Stretch) with o without Graphic interface (Desktop)
+```
+sudo apt-get install git
+```
+Aftere choose the folder to recieve the files and folders with the command `cd` and when we ready use the next line code.
+```
+git clone https://github.com/phenosense-ciat/Module-image.git
+```
+The files unzip appear in a folder named Module-image. We can navigate inside of them. If is necessary we can copy and past the files in other folder of preference for example copy some files to `/home/pi` with the command `cp`
+```
+cd Module-image/NDVI-Raspberry/Station/
+ls
+sudo cp Module-image/NDVI-Raspberry/Station/runCamEventos.py /home/pi
+sudo cp Module-image/NDVI-Raspberry/Station/cam.py /home/pi
+sudo cp Module-image/NDVI-Raspberry/Station/ndviEstacionDemo.py /home/pi
+sudo cp Module-image/NDVI-Raspberry/Station/conteo.txt /home/pi
+sudo cp Module-image/NDVI-Raspberry/Station/speed.txt /home/pi
+cd ~
+ls
+```
+The command `ls` show the files in the current folder and `cd ~` return to default folder that always is `home/pi`
+
+# 6. Edit files in Raspbian Jessie or Stretch Lite
+When we want edit, create files Python scripts, text files, shell scripts in this SO. We have to use `sudo nano`. For example
+```
+sudo nano conteo.txt
+```
+or
+```
+sudo nano runCamEventos.py
+```
+In any case if the file nonexist Raspbian create an empty file, if the file exist Raspbian will allow to do modification on it.
 
 # References
 
@@ -202,3 +236,11 @@ sudo apt-get install python-picamera
 Trying to use the requests library)
 - https://www.raspberrypi.org/documentation/usage/camera/python/README.md (Picamera Installation)
 - https://picamera.readthedocs.io/en/release-1.13/install.html (Picamera Installation)
+
+## Section 5.
+- https://raspberrypi.stackexchange.com/questions/8658/can-i-install-git-on-raspbian (Can I install Git on Raspbian?)
+- https://askubuntu.com/questions/400152/how-to-copy-and-paste-a-file (how to copy and paste a file)
+
+## Section 6.
+- http://www.circuitbasics.com/how-to-write-and-run-a-python-program-on-the-raspberry-pi/ (HOW TO WRITE AND RUN A PYTHON PROGRAM ON THE RASPBERRY PI) 
+- https://superuser.com/questions/373026/how-to-input-hash-symbol-to-terminal (How to input hash (#) symbol to terminal?)
