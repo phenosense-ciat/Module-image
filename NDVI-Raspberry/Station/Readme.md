@@ -6,7 +6,20 @@ In this folder is all scripts to work the calculate of the NDVI from a station m
 First initialize the script `runCamEventos.py`, inside of it calls to `cam.py`, after calls to `ndviEstacionDemo.py` and finally calls to `my_SFTP.py`. 
 
 # 2. Brief description of each script.
-Here a brief description of each file in the station, each script has its respect comments where explain in details each line of code.
+We describe briefly each script that must has to be in the station, each script has its respect comments where explain in details each  code line.
+The scripts must has to be in the station are:
+```
+runCamEventos.py
+cam.py
+ndviEstacionDemo.py
+my_SFTP.py
+conteo.txt
+speed.txt
+on_reboot.sh
+(Optional) runCam.py
+```
+
+Below the brief description of each of them.
 
 ### runCamEventos.py
 Execute a rutine where the capture and save photos without distortion the which is dependent of the activation of a magnetic sensor pasive "Reedswitch" that when is activated by a magnet. There are 4 magnet in the physical station therefore capture four picture. This happens through a the mobile body spin waiting the activation of a switch that change the turning sense of the mobile body to complete 360 degree and waiting other switch that indicate the end of spin. The before is programmed with interruptions. The second part is calculate the NDVI and send the indices to plaftorm web think "ThinkSpeak" and the last part is sends the photos saved through SFTP protocole to a server.
@@ -18,7 +31,7 @@ Script that capture a photo from the camera of the Raspberry and fix the distort
 Script that has two options read a image saved in the device or take directly a picture from camera and apply a radiometric correction through the Empirical Line Method. Finally, the index is calculated and this is saved in the text file named `ndvi.txt` and only when the four indices was calculated they are sent to ThinkSpeak.
 
 ### my_SFTP.py
-Script that sends the images to server machine trough SFTP protocole.
+Script that sends the images to server machine through SFTP protocole. This 
 
 ### conteo.txt
 Text file that allows you to keep track of how many photos have been taken and how many photos have been processed.
@@ -29,7 +42,7 @@ File .sh that contains the library paths that allow to initialize the script of 
 ### speed.txt
 Text file that contains the exposure speed of the camera, which is requested by the `cam.py` script or `ndviEstationDemo.py`. Therefore, it is a file that should not be deleted. It is useful when working under a graphic environment because you can edit this number easily without entering the thick code to change the exposure speed of the camera, because this file is read automatically
 
-### runCam.py
+### (Optional) runCam.py
 Script that performs the same procedure `runCamEventos.py` with the difference that it does not use interrupts but works with the count of the times that happened under a magnet for the capture of photos, when the automatic count is changed four times the direction of rotation and when counting four times the detection of the magnets will stop to calculate the indices and then send the indices to ThinkSpeak and the SFTP server.
 
 # 3. Running a Python + OpenCV script on reboot
