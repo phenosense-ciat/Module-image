@@ -48,7 +48,7 @@ PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 cd /home/pi
 python runCamEventos.py
 ```
-When we have a virtual environment. We use the next commands.
+When we have a **virtual environment**. We use the next commands.
 ```
 #!/bin/bash
 PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
@@ -58,7 +58,7 @@ workon cv
 cd /home/pi
 python runCamEventos.py
 ```
-where (cv) is a virtual environment with a specific Python version.
+where (cv) is a **virtual environment** with a specific Python version.
 
 After adding these lines to to your `on_reboot.sh` , save the file and then. Then, to make it executable, you’ll need to chmod  it:
 ```
