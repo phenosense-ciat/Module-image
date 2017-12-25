@@ -40,7 +40,7 @@ Before we can execute our Python script on reboot, we first need to create a she
 
 Therefore the optional point can be avoid but not the second part, then we can create a shell script to execute the Python script without virtual environment.
 
-we create a shell script named `on_reboot.sh` for the case without virtual environment
+we create a shell script named `on_reboot.sh`. For the case without **virtual environment** or even had but not use it in the shell script because is invoked inside of the Python script. 
 ```
 #!/bin/bash
 PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
