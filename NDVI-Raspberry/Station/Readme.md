@@ -1,6 +1,9 @@
+# Overview
+In this folder is all scripts to work the calculate of the NDVI from a station mobile. We can download this files and completed repository with the command `git clone` from a Raspberry Pi. The file `my_SFTP.py` is in the folder named SFTP, one is goes out of this folder, why? Because it is file that is generic in any Raspberry Pi, it has a different function to calculate one index. Its function is comunicate two device. Therefore that script is in other folder of the repository. In the other hand, the file `on_reboot.sh` has to be create manually (in the section 3 explains how do it). Finally, to remember read this README completly before of begin any installation, any edition of code, each script in this folder has comments explaining its function.
+
 # 1. Order of execution of scripts.
 
-First initialize the script `runCamEventos.py`, inside of it calls to `cam.py`, after calls to `ndviEstacionDemo.py` and finally calls to `SFTP.py`. 
+First initialize the script `runCamEventos.py`, inside of it calls to `cam.py`, after calls to `ndviEstacionDemo.py` and finally calls to `my_SFTP.py`. 
 
 # 2. Brief description of each script.
 Here a brief description of each file in the station, each script has its respect comments where explain in details each line of code.
