@@ -41,7 +41,7 @@ try:
     p.start(velocity)
     GPIO.wait_for_edge(buttonEnd1, GPIO.FALLING)
     p.stop()
-    #Point control
+    #Point control of flag 1
     #print("flag 1")
     print("Returning")
     p1.start(velocity)
