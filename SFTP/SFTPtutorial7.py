@@ -31,32 +31,28 @@ def sftpExample():
         remotepath='/home/phenosense/phenosense/public/sites/default/files/imagesremote/'+data
         localpath=location+data
         s.put(localpath,remotepath)
-        #s.put('C:\ftp\rasp\example.txt')
         s.close()
 
-##        #File 1
-##        s = sftp.Connection(host=ip,port=9023,username='phenosense', password='$P20172!',cnopts=cnopts)
-##        remotepath='/home/phenosense/phenosense/public/sites/default/files/imagesremote/'+data1
-##        localpath=location+data
-##        s.put(localpath,remotepath)
-##        #s.put('C:\ftp\rasp\example.txt')
-##        s.close()
-##
-##        #File 2
-##        s = sftp.Connection(host=ip,port=9023,username='phenosense', password='$P20172!',cnopts=cnopts)
-##        remotepath='/home/phenosense/phenosense/public/sites/default/files/imagesremote/'+data2
-##        localpath=location+data
-##        s.put(localpath,remotepath)
-##        #s.put('C:\ftp\rasp\example.txt')
-##        s.close()
-##
-##        #File 3
-##        s = sftp.Connection(host=ip,port=9023,username='phenosense', password='$P20172!',cnopts=cnopts)
-##        remotepath='/home/phenosense/phenosense/public/sites/default/files/imagesremote/'+data3
-##        localpath=location+data
-##        s.put(localpath,remotepath)
-##        #s.put('C:\ftp\rasp\example.txt')
-##        s.close()
+        #File 1
+        s = sftp.Connection(host=ip,port=9023,username='phenosense', password='$P20172!',cnopts=cnopts)
+        remotepath='/home/phenosense/phenosense/public/sites/default/files/imagesremote/'+data1
+        localpath=location+data
+        s.put(localpath,remotepath)
+        s.close()
+
+        #File 2
+        s = sftp.Connection(host=ip,port=9023,username='phenosense', password='$P20172!',cnopts=cnopts)
+        remotepath='/home/phenosense/phenosense/public/sites/default/files/imagesremote/'+data2
+        localpath=location+data
+        s.put(localpath,remotepath)
+        s.close()
+
+        #File 3
+        s = sftp.Connection(host=ip,port=9023,username='phenosense', password='$P20172!',cnopts=cnopts)
+        remotepath='/home/phenosense/phenosense/public/sites/default/files/imagesremote/'+data3
+        localpath=location+data
+        s.put(localpath,remotepath)
+        s.close()
 
     except socket.error, e:
         print str(e)
