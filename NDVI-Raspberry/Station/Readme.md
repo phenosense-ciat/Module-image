@@ -65,7 +65,7 @@ chmod +x on_reboot.sh
 ```
 After changing the permissions of the file to executable.
 
-### Edit crontab for execute the shell script
+### Edit crontab for executing the shell script
 
 Now that we have defined the `on_reboot.sh`  shell script, let’s update the crontab to call it on system reboot.
 
