@@ -1,3 +1,7 @@
+Overview
+
+This system initialize show in display that the system is ready for working, the script wait to an user push button of capture. After show in the display that is working while capture to picture and show in the display the NDVI value. The user can capture vegetation index the times he wants. Finally other button is available for shutdown the device and show in the display "Good Bye"
+
 # 1. Order of execution of scripts.
 
 First initialize the script `ndviPortable.py`, inside of it calls to `displayTexto.py`.
@@ -66,7 +70,7 @@ sudo python shapes.py
 
 # Reference
 
-### Section 2
+### Section 3
  - https://learn.adafruit.com/adafruit-oled- (Adafruit FeatherWing OLED 128x32 Pinouts)
  - https://learn.adafruit.com/ssd1306-oled-displays-with-raspberry-pi-and-beaglebone-black/wiring (Adafruit FeatherWing OLED 128x32 Wiring)
  - https://learn.adafruit.com/ssd1306-oled-displays-with-raspberry-pi-and-beaglebone-black/usage (Adafruit library SSD1306 for FeatherWing OLED 128x32)
