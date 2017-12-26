@@ -1,5 +1,5 @@
 # Overview
-Durantly in this project was developed two way to capture NDVI. One a fix station NDVI and a second portable NDVI for cases where the user needs move in the crop. In this folder there are Python scripts developed for both cases. Inside of each folder there are instructions of usage, installation and important information for garantue the major probability of success. The next section says "Runing a Python + OpenCV script on reboot" this topic is global in both cases because station and portable need run Python script from the boot.
+Durantly in this project was developed two way to capture NDVI. One a fix station NDVI and a second portable NDVI for cases where the user needs move in the crop. In this folder there are Python scripts developed for both cases. Inside of each folder there are instructions of usage, installation and important information for garantue the major probability of success. The next section says **"Runing a Python + OpenCV script on reboot"** this topic is global in both cases (station and portable). They needs run Python script from the boot. Therefore we recommed read the next section, after create the launchers and create or edit the Python scripts.
 
 # Running a Python + OpenCV script on reboot
 The developed here is based in this source: https://www.pyimagesearch.com/2016/05/16/running-a-python-opencv-script-on-reboot/
