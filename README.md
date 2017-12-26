@@ -5,6 +5,7 @@
 - Empirical line method -> Scripts of Matlab about of radiometric calibration for low-cost cameras.
 - NDVI-Raspberry -> Scripts in Python for calculate of NDVI emmbedded in the Raspberry Pi Zero, 2 and 3 with instructions of use.
 - SFTP -> Script in Python for sent images through SFTP protocole between Ubuntu server and Client Raspberry Pi. With instructions of use.
+- Backstage -> Other Python scripts that served of support, of learning. To build the definitives.  
 
 # 2. Prepare Raspberry Pi (Zero, 2, 3)
 
