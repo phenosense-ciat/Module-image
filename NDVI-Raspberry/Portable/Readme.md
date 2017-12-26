@@ -23,7 +23,7 @@ Below the brief description of each of them.
 Script that has two options read a image saved in the device or take directly a picture from camera and apply a radiometric correction through the Empirical Line Method. Finally, the index is calculated and it is visualized in a display OLED 128x32 Monochrome FeatherWing.
 
 ### displayTexto.py
-Script that import and use the library Adafruit Python SSD1306 for recieving a string for after to be show in the display OLED 128x32 Monochrome. Inside of this Python script there the option of change the font by other of your preference. The fonts can to be got from www.dafont.com/bitmap.php 
+Script that import and use the library Adafruit Python SSD1306 for recieving a string for after to be show in the display OLED 128x32 Monochrome. Inside of this Python script there the option of change the font by other of your preference. The fonts can to be got from www.dafont.com/bitmap.php in this case was used the font named `VCR_OSD_MONO.ttf`
 
 # 3. Installation of library Adafruit Python SSD1306 on Raspberry Pi Zero, 2, 3
 
