@@ -179,6 +179,7 @@ def my_thinking(channel):
     #print('Value of NDVI sends to ThinkSpeak is '+NDVI)
     # Send value NDVI to ThinkSpeak Portal
     #r = requests.get("http://labsistemas.javerianacali.edu.co:8002/update?key=9XUY4FEVNOG29S4U&field1="+NDVI)
+    #r = requests.get("http://http://165.227.180.227:3000/update?key=YT23QZX3FIGJFFCT&field1="+NDVI)
     #print (r.status_code, r.reason)
 
 displayTexto.verDisplay('Im Ready')
